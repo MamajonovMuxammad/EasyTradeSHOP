@@ -19,12 +19,14 @@ from django.urls import path,include
 from users import views
 from django.conf import settings
 from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', include('users.urls')),
     path('users/', include('users.urls')),
     path('products/', include('products.urls', namespace='products')),
+    path('cart/', include('cart.urls', namespace='cart')),
 ]
 
 

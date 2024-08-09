@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'cart',
     'products',
     'users',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +130,8 @@ LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-# Email configuration
+
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+CART_SESSION_ID = 'cart'
