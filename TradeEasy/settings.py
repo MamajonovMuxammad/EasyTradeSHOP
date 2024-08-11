@@ -148,8 +148,8 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.twitter.TwitterOAuth',
     'social_core.backends.google.GoogleOAuth2',
 ) 
-SOCIAL_AUTH_FACEBOOK_KEY = '1186853005996024' # ИД приложения Facebook
-SOCIAL_AUTH_FACEBOOK_SECRET = '451387367d278e81045ddee450f14a80' # Секрет приложения Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = os.getenv('1186853005996024') # ИД приложения Facebook
+SOCIAL_AUTH_FACEBOOK_SECRET = os.getenv('451387367d278e81045ddee450f14a80') # Секрет приложения Facebook
 SOCIAL_AUTH_FACEBOOK_SCOPE = [
     'email',
     ]
@@ -157,12 +157,12 @@ SOCIAL_AUTH_FACEBOOK_API_VERSION = '2.10'
 SOCIAL_AUTH_FACEBOOK_REDIRECT_URI = 'https://mysite.com:8000/social-auth/complete/facebook/'
 LOGIN_REDIRECT_URL = '/'
 
-SOCIAL_AUTH_TWITTER_KEY = 'mPIp8bJfwTFx9Cx9MfXfyHjvZ' # Ключ API Twitter
-SOCIAL_AUTH_TWITTER_SECRET = '5jVXM9J1WGDnpM5kYuYi5KVkwDWNjDp7WhRUKaIoNAIw26SXHa' # Секрет API Twitter
+SOCIAL_AUTH_TWITTER_KEY = os.getenv('mPIp8bJfwTFx9Cx9MfXfyHjvZ') # Ключ API Twitter
+SOCIAL_AUTH_TWITTER_SECRET = os.getenv('5jVXM9J1WGDnpM5kYuYi5KVkwDWNjDp7WhRUKaIoNAIw26SXHa')# Секрет API Twitter
 
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '365808964047-k3mcs0jefp8hl9ube0nbl0jingt84ct2.apps.googleusercontent.com' # ИД клиента Google
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' # Секрет клиента Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv('365808964047-k3mcs0jefp8hl9ube0nbl0jingt84ct2.apps.googleusercontent.com') # ИД клиента Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv('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') # Секрет клиента Google
 
 
 
