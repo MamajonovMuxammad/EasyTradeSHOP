@@ -46,7 +46,7 @@
     </table>
     <p class="cart-actions">
         <a href="{% url 'products:product_list' %}" class="button continue-shopping">Continue Shopping</a>
-        <a href="#" class="button checkout">Checkout</a>
+        <a href="{% url "orders:order_create" %}" class="button checkout">Checkout</a>
     </p>
 </div>
 {% endblock %}

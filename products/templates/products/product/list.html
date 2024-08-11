@@ -39,8 +39,9 @@ Products
             <a href="{{ product.get_absolute_url }}">
                 <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.jpg' %}{% endif %}" alt="{{ product.name }}" class="product-image">
             </a>
-            <a href="{{ product.get_absolute_url }}" class="product-name">{{ product.name }}</a>
+            <a href="{{ product.get_absolute_url }}" class="product-names">{{ product.name }}</a>
             <p class="product-price">{{ product.price }} сум</p>
+            
         </div>
         {% endfor %}
     </div>
