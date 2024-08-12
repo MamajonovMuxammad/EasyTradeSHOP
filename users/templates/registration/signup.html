@@ -1,18 +1,21 @@
 <!--/templates/register.html-->
 {% extends 'base.html' %}
+{% load i18n %}
+
 {% block content %}
 <div class="register-container">
-    <h2>Register</h2>
+    <h2>{% trans 'Register' %}</h2>
 
 
     <form method="post">
         {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Register">
+        {{ form.as_p }}
+        <input type="submit" value="{% trans 'Register' %}">
     </form>
     
-    <a href="{% url 'login' %}">Back to login</a>
-    <a href="{% url 'home' %}">Back to Home</a>
+    
+    <a href="{% url 'login' %}">{% trans 'Back to login' %}</a>
+    <a href="{% url 'home' %}">{% trans 'Back to Home' %}</a>
 </div>
 
 {% endblock %} 

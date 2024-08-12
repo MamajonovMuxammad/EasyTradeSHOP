@@ -1,9 +1,11 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>{% block title %}My shop{% endblock %}</title>
+    <title>{% block title %} 
+        {% trans 'My shop' %}
+    {% endblock %}</title>
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     
     
@@ -11,12 +13,13 @@
 <body>     
     {% if user.is_authenticated %}
     <div id="subheader">
-    
+
         <div class="cart">
-            <h3>Your cart is empty</h3>
+            <h3>{% trans 'Your cart is empty' %}</h3>
             
         </div>
     </div>
+    
     {% endif %}
     <div id="content">
         {% block content %}

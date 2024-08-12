@@ -12,6 +12,17 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from django.utils.translation import gettext_lazy as _
+
+
+LANGUAGES = [
+    ('de', _('German')),
+    ('en', _('English')),
+    ('ru', _('Russian')),
+]
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
+MODELTRANSLATION_POPULATION_DEFAULT_LANGUAGE = 'en'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,10 +38,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,11 +64,15 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'TradeEasy.urls'
@@ -65,6 +84,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.i18n',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -119,6 +139,7 @@ USE_I18N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
@@ -148,8 +169,8 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.twitter.TwitterOAuth',
     'social_core.backends.google.GoogleOAuth2',
 ) 
-SOCIAL_AUTH_FACEBOOK_KEY = os.getenv('1186853005996024') # ИД приложения Facebook
-SOCIAL_AUTH_FACEBOOK_SECRET = os.getenv('451387367d278e81045ddee450f14a80') # Секрет приложения Facebook
+SOCIAL_AUTH_FACEBOOK_KEY = '1186853005996024' # ИД приложения Facebook
+SOCIAL_AUTH_FACEBOOK_SECRET = '451387367d278e81045ddee450f14a80' # Секрет приложения Facebook
 SOCIAL_AUTH_FACEBOOK_SCOPE = [
     'email',
     ]
@@ -157,12 +178,12 @@ SOCIAL_AUTH_FACEBOOK_API_VERSION = '2.10'
 SOCIAL_AUTH_FACEBOOK_REDIRECT_URI = 'https://mysite.com:8000/social-auth/complete/facebook/'
 LOGIN_REDIRECT_URL = '/'
 
-SOCIAL_AUTH_TWITTER_KEY = os.getenv('mPIp8bJfwTFx9Cx9MfXfyHjvZ') # Ключ API Twitter
-SOCIAL_AUTH_TWITTER_SECRET = os.getenv('5jVXM9J1WGDnpM5kYuYi5KVkwDWNjDp7WhRUKaIoNAIw26SXHa')# Секрет API Twitter
+SOCIAL_AUTH_TWITTER_KEY = 'mPIp8bJfwTFx9Cx9MfXfyHjvZ' # Ключ API Twitter
+SOCIAL_AUTH_TWITTER_SECRET = '5jVXM9J1WGDnpM5kYuYi5KVkwDWNjDp7WhRUKaIoNAIw26SXHa' # Секрет API Twitter
 
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv('365808964047-k3mcs0jefp8hl9ube0nbl0jingt84ct2.apps.googleusercontent.com') # ИД клиента Google
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv('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') # Секрет клиента Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '365808964047-k3mcs0jefp8hl9ube0nbl0jingt84ct2.apps.googleusercontent.com' # ИД клиента Google
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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' # Секрет клиента Google
 
 
 

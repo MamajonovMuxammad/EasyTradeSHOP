@@ -1,6 +1,6 @@
 {% extends 'products/base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block title %}
 {% if category %}
 {{ category.name }}
@@ -11,10 +11,10 @@ Products
 
 {% block content %}
 <div class="category-sidebar">
-    <h3 class="sidebar-title">Categories</h3>
+    <h3 class="sidebar-title">{% trans 'Categories' %}</h3>
     <ul class="category-list">
         <li class="category-item {% if not category %}selected{% endif %}">
-            <a href="{% url 'products:product_list' %}">All</a>
+            <a href="{% url 'products:product_list' %}">{% trans 'All' %}</a>
         </li>
         {% for c in categories %}
         <li class="category-item {% if category and category.slug == c.slug %}selected{% endif %}">
@@ -22,7 +22,7 @@ Products
         </li>
         {% endfor %}
     </ul>
-    <a href="{% url 'home' %}" class="back-to-home">Back to Home</a>
+    <a href="{% url 'home' %}" class="back-to-home"></a>
 </div>
 
 <div class="product-list-wrapper">
@@ -30,7 +30,7 @@ Products
         {% if category %}
         {{ category.name }}
         {% else %}
-        Products
+        {% trans 'Products' %}
         {% endif %}
     </h1>
     <div class="product-grid">

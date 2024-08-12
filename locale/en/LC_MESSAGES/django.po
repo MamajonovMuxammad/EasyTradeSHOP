@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-13 02:13+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\TradeEasy\settings.py:19
+msgid "German"
+msgstr "German"
+
+#: .\TradeEasy\settings.py:20
+msgid "English"
+msgstr "English"
+
+#: .\TradeEasy\settings.py:21
+msgid "Russian"
+msgstr "Russian"
+
+#: .\products\models.py:24
+msgid "name"
+msgstr "name"
+
+#: .\products\models.py:27
+msgid "description"
+msgstr "description"
+
+#: .\products\templates\products\base.html:7
+msgid "My shop"
+msgstr "My shop"
+
+#: .\products\templates\products\base.html:18
+msgid "Your cart is empty"
+msgstr "Your cart is empty"
+
+#: .\products\templates\products\product\list.html:14
+msgid "Categories"
+msgstr "Categories"
+
+#: .\products\templates\products\product\list.html:17
+msgid "All"
+msgstr "All"
+
+#: .\products\templates\products\product\list.html:33
+msgid "Products"
+msgstr "Products"
+
+#: .\users\templates\registration\login.html:6
+#: .\users\templates\registration\login.html:12
+msgid "Login"
+msgstr "Login"
+
+#: .\users\templates\registration\login.html:14
+msgid "Sign Up"
+msgstr "Sing up"
+
+#: .\users\templates\registration\login.html:22
+msgid "Submit"
+msgstr "Submit"
+
+#: .\users\templates\registration\login.html:34
+msgid "Sign in with Facebook"
+msgstr "Sign in with Facebook"
+
+#: .\users\templates\registration\login.html:39
+msgid "Sign in with Twitter"
+msgstr "Sign in with Twitter"
+
+#: .\users\templates\registration\login.html:44
+msgid "Sign in with Google"
+msgstr "Sign in with Google"
+
+#: .\users\templates\registration\logout.html:11
+msgid "Вы вышли из системы!"
+msgstr "Вы вышли из системы!"
+
+#: .\users\templates\registration\logout.html:13
+msgid "Вы успешно вышли из аккаунта!"
+msgstr "Вы успешно вышли из аккаунта!"
+
+#: .\users\templates\registration\logout.html:14
+msgid "Вы можете снова войти"
+msgstr "Вы можете снова войти"
+
+#: .\users\templates\registration\logout.html:14
+msgid "Зарегайтесь!"
+msgstr "Зарегайтесь!"
+
+#: .\users\templates\registration\signup.html:7
+#: .\users\templates\registration\signup.html:13
+msgid "Register"
+msgstr "Register"
+
+#: .\users\templates\registration\signup.html:17
+msgid "Back to login"
+msgstr "Back to login"
+
+#: .\users\templates\registration\signup.html:18
+msgid "Back to Home"
+msgstr "Back to Home"
+
+#: .\users\templates\users\home.html:8
+msgid "Hello,"
+msgstr "Hello,"
+
+#: .\users\templates\users\home.html:24
+msgid "Welcome to MarketPlace"
+msgstr "Welcome to MarketPlace"
+
+#: .\users\templates\users\home.html:35
+msgid "Добро пожаловать"
+msgstr "Welcome to"
+
+#: .\users\templates\users\home.html:35
+msgid "на наш сайт!"
+msgstr "our site!"
+
+#: .\users\templates\users\home.html:36
+msgid ""
+"Добро пожаловать в Foodie Finds! Здесь вы найдете самые свежие и вкусные "
+"продукты, которые удовлетворят любые гастрономические предпочтения. Делайте "
+"покупки легко и удобно, а мы позаботимся о вашем вкусовом удовольствии!"
+msgstr ""
+"Welcome to Foodie Finds! Here you will find the freshest and most delicious "
+"products that will satisfy any gastronomic preference. Do shopping is easy "
+"and convenient, and we will take care of your taste pleasure!"
+
+#: .\users\templates\users\home.html:40
+msgid "Начните покупки!"
+msgstr "Start Shopping!"
+
+#: .\users\templates\users\home.html:47
+msgid "&copy; 2024 MarketPlace. All rights reserved."
+msgstr "&copy; 2024 MarketPlace. All rights reserved."
+
+#~ msgid "Spanish"
+#~ msgstr "Spanish"
+
+#~ msgid "French"
+#~ msgstr "French"
